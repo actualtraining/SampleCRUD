@@ -42,6 +42,9 @@
     <Compile Include="KategoriAddPage.xaml.cs">
       <DependentUpon>KategoriAddPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="KategoriEditPage.xaml.cs">
+      <DependentUpon>KategoriEditPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="KategoriPage.xaml.cs">
       <DependentUpon>KategoriPage.xaml</DependentUpon>
     </Compile>
@@ -120,6 +123,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="KategoriAddPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="KategoriEditPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

@@ -33,7 +33,10 @@ namespace SampleCRUD
         private async void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             var kategoriItem = e.SelectedItem as Kategori;
-            await DisplayAlert("Keterangan", kategoriItem.KategoriNama,"OK");
+            //await DisplayAlert("Keterangan", kategoriItem.KategoriNama,"OK");
+            KategoriEditPage kategoriEditPage = new KategoriEditPage();
+            kategoriEditPage.BindingContext = kategoriItem;
+            await Navigation.PushAsync(kategoriEditPage);
         }
 
         protected async override void OnAppearing()

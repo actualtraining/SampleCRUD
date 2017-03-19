@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleCRUD.KategoriEditPage" Title="Edit Kategori">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Label Text="Kategori ID :" FontSize="Medium" VerticalTextAlignment="Center" HorizontalTextAlignment="End" />
+            <Entry FontSize="Medium" Text="{Binding KategoriID}" x:Name="txtKategoriID" IsEnabled="False" Grid.Column="1" Grid.Row="0" />
+            <Label Text="Nama Kategori :" FontSize="Medium" VerticalTextAlignment="Center" HorizontalTextAlignment="End" Grid.Row="1" Grid.Column="0" />
+            <Entry FontSize="Medium" Text="{Binding KategoriNama}" x:Name="txtKategoriName" Grid.Column="1" Grid.Row="1" />
+            <StackLayout Orientation="Horizontal" Grid.Row="2" Grid.Column="1">
+                <Button x:Name="btnEdit" Text="Edit" Clicked="btnEdit_Clicked" />
+                <Button x:Name="btnDelete" Text="Delete" Clicked="btnDelete_Clicked" />
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
