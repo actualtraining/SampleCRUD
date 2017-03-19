@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleCRUD.KategoriPage" Title="Daftar Kategori">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="+" x:Name="toolBarAdd">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource" Android="plus.png" />
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <StackLayout>
+        <ActivityIndicator x:Name="myIndicator" WidthRequest="60" Color="Blue" 
+                       VerticalOptions="Center" HorizontalOptions="Center" />
+        <ListView x:Name="listView" HasUnevenRows="True" RowHeight="80" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="20,0,0,0" HorizontalOptions="StartAndExpand" Orientation="Horizontal">
+                            <Label Text="{Binding KategoriID}" FontSize="22" VerticalTextAlignment="Center"/>
+                            <Label Text="{Binding KategoriNama}" FontSize="22" VerticalTextAlignment="Center"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleCRUD.KategoriAddPage" Title="Tambah Kategori">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Label Text="Nama Kategori :" HorizontalTextAlignment="End" />
+            <Entry Placeholder="masukan nama kategori" x:Name="txtKategoriName" Grid.Column="1" Grid.Row="0" />
+            <Button x:Name="btnTambah" Text="Tambah" Grid.Row="1" Grid.Column="1" Clicked="btnTambah_Clicked" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
