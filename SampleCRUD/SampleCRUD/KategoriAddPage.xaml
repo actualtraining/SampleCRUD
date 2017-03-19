@@ -14,8 +14,8 @@
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
-            <Label Text="Nama Kategori :" HorizontalTextAlignment="End" />
-            <Entry Placeholder="masukan nama kategori" x:Name="txtKategoriName" Grid.Column="1" Grid.Row="0" />
+            <Label Text="Nama Kategori :" FontSize="Medium" VerticalTextAlignment="Center" HorizontalTextAlignment="End" />
+            <Entry Placeholder="masukan nama kategori" FontSize="Medium" x:Name="txtKategoriName" Grid.Column="1" Grid.Row="0" />
             <Button x:Name="btnTambah" Text="Tambah" Grid.Row="1" Grid.Column="1" Clicked="btnTambah_Clicked" />
         </Grid>
     </ContentPage.Content>

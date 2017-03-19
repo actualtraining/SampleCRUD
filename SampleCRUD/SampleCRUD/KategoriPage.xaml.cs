@@ -22,9 +22,13 @@ namespace SampleCRUD
             kategoriService = new KategoriServices();
 
             listView.ItemSelected += ListView_ItemSelected;
+            toolBarAdd.Clicked += ToolBarAdd_Clicked;
         }
 
-      
+        private async void ToolBarAdd_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new KategoriAddPage());
+        }
 
         private async void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {

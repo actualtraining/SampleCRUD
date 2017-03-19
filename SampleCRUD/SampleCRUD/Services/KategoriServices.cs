@@ -32,13 +32,44 @@ namespace SampleCRUD.Services
         {
             var request = new RestRequest("api/Kategori", Method.POST);
             request.AddBody(kategori);
+            
             try
             {
                 await _client.Execute(request);
             }
             catch (Exception ex)
             {
-                throw new Exception;
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public async Task EditKategori(Kategori kategori)
+        {
+            var request = new RestRequest("api/Kategori", Method.PUT);
+            request.AddBody(kategori);
+
+            try
+            {
+                await _client.Execute(request);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public async Task DeleteKategori(int id)
+        {
+            var request = new RestRequest("api/Kategori/{id}", Method.DELETE);
+            request.AddUrlSegment("id", id);
+
+            try
+            {
+                await _client.Execute(request);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
             }
         }
     }
